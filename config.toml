@@ -1,4 +1,4 @@
 baseURL = "https://pittman021.github.io/"
 languageCode = "en-us"
 title = "Tim Pittman"
-theme = "ananke"
+theme = "hugo-theme-cactus-plus"
