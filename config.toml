@@ -1,4 +1,11 @@
 baseURL = "https://pittman021.github.io/"
 languageCode = "en-us"
-title = "Tim P"
-theme = "ananke"
+title = "Tim Pittman"
+theme = "hugo-theme-cactus-plus"
+
+[params]
+  AuthorName = "Jon Doe"
+  GitHubUser = "spf13"
+  ListOfFoo = ["foo1", "foo2"]
+  SidebarRecentLimit = 5
+  bio = "Hugo is Absurdly Fast!"

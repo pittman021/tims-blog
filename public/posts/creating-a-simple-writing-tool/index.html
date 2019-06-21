@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.55.6" />
+		<title>Creating a Simple Writing Tool &middot; Tim Pittman</title>
+		<link rel="shortcut icon" href="https://pittman021.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://pittman021.github.io/css/style.css">
+		<link rel="stylesheet" href="https://pittman021.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://pittman021.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://pittman021.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://pittman021.github.io/posts'>Archive</a>
+	<a href='https://pittman021.github.io/tags'>Tags</a>
+	<a href='https://pittman021.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Creating a Simple Writing Tool
+                    </h1>
+                    <h2 class="headline">
+                    Apr 23, 2019 21:40
+                    · 1214 words
+                    · 6 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>Earlier this year I came across a book titled <a href="https://www.amazon.com/Artists-Way-25th-Anniversary/dp/0143129252">The Artist&rsquo;s Way</a>. This book outlines a journaling habit and other activities that are intended to unlock your creativity. It calls for writing by hand 750 words each day for a month. You freewrite without stopping &amp; throw away the draft when you&rsquo;re done.</p>
+
+<p>I decided to pick this habit to develop a productive morning routine &amp; keep my head clear and remain focused. I felt the benefits. But unfortunately, the habit of writing, by hand, 3 full pages of text became cumbersome and I stopped. So I began writing it by computer and I feel much of the same benefits.</p>
+
+<p>This is when I began wanting a way to track my progress &amp; keep my streak alive. Evernote &amp; other journaling tools aren&rsquo;t quite designed for that. I came across <a href="750words.com">750words.com</a> - an excellent site. But it charges after a month and I don&rsquo;t love the design.</p>
+
+<p>So I created my own.</p>
+
+<p>You can view it here, at <a href="timpittman.co/write-daily">write daily</a>. It tracks your daily progress, auto-saves your drafts as you stop writing, and most of all, is completely free, contains 0 ads, and 0 popups. Your progress is tracked in your browser storage. You can delete it anytime. But be sure not to clear your cookies.</p>
+
+<p>Implementing this was fun. Here&rsquo;s what I did:</p>
+
+<p>It contains just three files: index.html, index.js, and index.css. Because of this it&rsquo;s extremely fast and lightweight.</p>
+
+<p>The HTML is very simple with just 50 lines.</p>
+
+<pre><code class="language-html"> &lt;div class=&quot;main&quot;&gt;
+     &lt;div class=&quot;header&quot;&gt;
+        &lt;h1&gt;Simple Journal&lt;/h1&gt;
+        &lt;h3 class=&quot;grey&quot; id=&quot;todays-date&quot;&gt;Today's Date&lt;/h3&gt;
+    &lt;/div&gt;
+        &lt;div id=&quot;month-dates&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;textarea-container&quot;&gt;
+                &lt;textarea id=&quot;textArea&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+        &lt;div class=&quot;footer&quot;&gt;
+            &lt;div class=&quot;main&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;column&quot;&gt;
+                            &lt;p&gt;Word Count: &lt;span id=&quot;count&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+                            &lt;p class=&quot;green text-small&quot; id=&quot;save-status&quot;&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;column&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;   
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+<p>Next is the fun part. The JavaScript that does all the hard work of saving &amp; fetching your data. It consists of one component named &lsquo;Journal&rsquo;, which contains a variety of methods &amp; data.</p>
+
+<pre><code class="language-javascript">class Journal {
+    constructor() {
+        this.text = 'hello';
+        this.wordCount = 0;
+        this.data = JSON.parse(localStorage.getItem('drafts'));
+        this.save = true;
+        this.timeoutId;
+        
+        // get things going // 
+        this.cacheDom();
+        this.bindEvents();
+        this.setInitialContent();
+        this.buildButtonList();
+    }
+</code></pre>
+
+<p>Here I create my Journal function which consists of a contructor function to setup my data. Next I kick-off the app with a series of functions.</p>
+
+<pre><code class="language-javascript">  cacheDom() {
+        this.textArea = document.querySelector('#textArea');
+        this.count = document.querySelector('#count');
+        // var wordGoal = document.querySelector('#word-goal');
+        this.saveStatus = document.querySelector('#save-status');
+        this.todaysDate = document.querySelector('#todays-date');
+        this.monthDates = document.querySelector('#month-dates');
+        this.tx = document.getElementsByTagName('textarea');
+    }
+
+    bindEvents() {
+        textArea.addEventListener('keyup', (e) =&gt; this.setText(e));
+        this.monthDates.addEventListener('click', (e) =&gt; this.chooseDraftDate(e));
+        textArea.addEventListener(&quot;input&quot;, this.OnInput, false);
+        }
+</code></pre>
+
+<p>Next I cache my HTML elements and bind event listeners I need. These track any &lsquo;textArea&rsquo; changes to save items and adjust textArea input size.</p>
+
+<pre><code class="language-javascript">      setInitialContent() {
+        var date = new Date(new Date().toDateString()).toString();
+        var arr = [];
+        var obj = { 
+            draft: this.text,
+            date: date
+        }
+        // setup new localStorage object for a new session.
+        arr.push(obj);
+        this.todaysDate.innerHTML = moment().format('MMMM Do, YYYY');
+
+        // if there's no saved drafts in session, create a new one &amp; display it. 
+        if (!this.data) {
+            this.text = &quot;Get started writing!&quot;;
+            this.data = arr;
+            this.render();
+        
+        // if there's data saved, find today's record. If no record for today, setup new one. 
+        } else {
+            var pos = this.data.map(function(e) { return e.date; }).indexOf(date);
+
+            // if no post for today. tis a new day! 
+            if(pos === -1) {
+                this.data.push(obj);
+                this.text = &quot;Today is a new day! Start writing =)&quot;;
+                this.render();
+            } else {
+            // if there is today's post. show it in textArea // 
+            this.text = this.data[pos].draft
+            this.render();
+            }
+        }
+    }
+</code></pre>
+
+<p>This huge function sets up all of my initial data. If you&rsquo;re a new user it creates initial content. If it&rsquo;s a new day, it creates starter text &amp; renders the component. Lastly, if there is data for today it grabs it and renders it in the textArea.</p>
+
+<pre><code class="language-javascript">render() {
+        this.textArea.value = this.text
+        this.count.innerText = this.getWordCount(this.text);
+        this.textArea.style.height = 'auto';
+        this.textArea.style.height = (this.textArea.scrollHeight) + 'px';
+        this.setStorage(this.data)
+    }
+</code></pre>
+
+<p>What&rsquo;s really fun is the render method. Which is called anytime our data changes. It&rsquo;s a very simple version of Vue or React. Once any data changes this method can be called to update the textArea value &amp; save our data.</p>
+
+<pre><code class="language-javascript">saveDraftToStorage() {
+        var date = new Date(new Date().toDateString()).toString();
+
+        // check whether save var is true, which is set when date is today. cant save old posts // 
+        if(this.save) {
+
+        // there should always be a draft
+            var pos = this.data.map(function(e) { return e.date; }).indexOf(date);
+            
+            // if date is not found. push new record for that date // 
+            if(pos === -1) {
+                var obj = {
+                    draft: this.text,
+                    date: date
+                }
+                this.data.push(obj);
+                this.setStorage(this.data);
+                this.saveStatus.innerHTML = 'post saved';
+                    setTimeout(function() {
+                        saveStatus.innerHTML = '';
+                    }.bind(this), 2000)
+                
+                // update draft if date already exist // 
+                } else {
+                    this.data[pos].draft = this.text
+                    this.setStorage(this.data);
+                    this.saveStatus.innerHTML = 'post saved';
+                    setTimeout(function() {
+                        this.saveStatus.innerHTML = '';
+                    }.bind(this), 2000)
+                }
+
+        }
+    }
+</code></pre>
+
+<p>The logic here just ensures 1) The post is saved in the correct day and 2) it overwrites the existing post if it already exists for today. Lastly, it checks that save === true in our data object, which is set to active only when you&rsquo;re viewing today&rsquo;s draft.</p>
+
+<p>This is called every 3 seconds once typing has stopped. I track that with this next event listener:</p>
+
+<pre><code class="language-javascript">setText(e) {
+        this.text = e.target.value;
+        if(e.keyCode === 32) {
+            if (this.timeoutId) clearTimeout(this.timeoutId);
+        
+            // Set timer that will save comment when it fires.
+            this.timeoutId = setTimeout(this.saveDraftToStorage.bind(this), 3000);
+        }
+        this.render()
+    }
+</code></pre>
+
+<p>What&rsquo;s fun is that I need to bind the context of this when calling saveDraftToStorage. Otherwise the context is set to &lsquo;this&rsquo;, which is the event being handled.</p>
+
+<p>Lastly, I need to render the buttons for each day. These show your streak and let you view previous posts.</p>
+
+<pre><code class="language-javascript">buildButtonList() {
+    var days = this.daysInMonth( moment().month() );
+    days.forEach(function(day,key) {
+        var dayMonth = key + 1;
+        // get the month 
+        var m = new Date().getMonth();
+        var date = new Date(new Date(2019,m,dayMonth).toDateString()).toString();
+        if(!this.data) {
+            this.addDateButton(day,dayMonth,date, true);
+            
+        } else {
+            var pos = this.data.map(function(e) { return e.date; }).indexOf(date);
+            if(pos === -1) {
+                this.addDateButton(day,dayMonth,date, true)
+            } else {
+                this.addDateButton(day,dayMonth,date, false);
+            }
+        }
+    }.bind(this));
+    }
+</code></pre>
+
+<p>This guy is kinda messy. But essentially it loops through each day of the month, which I use moment.JS to help with. Then after a quick check whether there is any data available, I check whether today&rsquo;s date is in our data. If so, I generate the button in a separate function, passing in it&rsquo;s status (active or passive), and the date info. Notice again I need to bind my forEach function to this class&rsquo;s context.</p>
+
+<p>That&rsquo;s mainly it! There are a few other things going on that are minor. But this is a really great example of how you can build quick components without using frameworks. It is also a great way to structure your javascript, with data at the top, eventlisteners binded in a single place, and methods towards the bottom. This prevents all sorts of spaghetti code where data is passed around or tied to the UI.</p>
+
+<p>The major challenge with this app is handling dates. It&rsquo;s particularly painful to compare dates, store them, and get data per day, etc. I eventually used momentJS, which really helps with formatting &amp; comparing dates, which native Date API lacks. Sometimes it just makes sense to leverage other people&rsquo;s great work and not write everything from scratch.</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://pittman021.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://pittman021.github.io/js/main.js"></script>
+<script src="https://pittman021.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

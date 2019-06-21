@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.55.6" />
+		<title>Shipping Gardenshq.com &middot; Tim Pittman</title>
+		<link rel="shortcut icon" href="https://pittman021.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://pittman021.github.io/css/style.css">
+		<link rel="stylesheet" href="https://pittman021.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://pittman021.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://pittman021.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://pittman021.github.io/posts'>Archive</a>
+	<a href='https://pittman021.github.io/tags'>Tags</a>
+	<a href='https://pittman021.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Shipping Gardenshq.com
+                    </h1>
+                    <h2 class="headline">
+                    Nov 23, 2018 20:53
+                    · 1147 words
+                    · 6 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>I’ve shipped my latest side project, gardenshq.com, a personal CRM geared around gift giving.</p>
+
+<p>This idea came from my girlfriend who was storing all her contacts and gifts in a google sheet, with no easy way to be 1) notified of upcoming dates 2) saving gifts she found around the web and 3) organizing gifts around holidays and birthdays. She’s a power gifter and she something with more oomph.</p>
+
+<p>Aside from customer development (I had one thus far), I’m going to outline the process of creating this MVP from scratch, including:</p>
+
+<ul>
+<li>creating my hypothesis, assumptions &amp; criteria for success</li>
+<li>research: competitive analysis</li>
+<li>user stories for v1, v2, v3 of the app</li>
+<li>wireframing &amp; data model for v1</li>
+<li>coding &amp; deployment</li>
+<li>ideation, hypothesis, assumptions</li>
+</ul>
+
+<p>MVPs are akin to science experiments. In this case we outline our problem, our solution, and hypothesis. Typically we wouldn’t build this outright, but I want to ship 🔥</p>
+
+<p><strong>Problem:</strong></p>
+
+<p>There’s no central place to save gifts to reference later for important dates of your family and friends. There are either full personal crms, or shop specific services.</p>
+
+<p><strong>Solution</strong></p>
+
+<p>Allow users to save gifts and their contacts in a single place to reference later</p>
+
+<p><strong>Hypothesis</strong></p>
+
+<p>I believe that power shoppers will sign-up for a website because it will help them manage their online shopping</p>
+
+<p>Assumptions: In order for this prod to be successful, the following must be true:</p>
+
+<ul>
+<li>People have a tough time remembering gifts and their network’s dates</li>
+<li>People will pay for an app to manage gifts and contacts</li>
+<li>People will spend time to input contacts into Gardens</li>
+<li>People find it too difficult to do this with free tools, sheets, airtable, etc.</li>
+</ul>
+
+<p><strong>Scope: what we’re building</strong> 🚀</p>
+
+<p>v1</p>
+
+<p>Ability to add/delete contacts with basic contact info (name, address, birthday)</p>
+
+<p>Ability to add/remove gifts for contacts, saving title and url</p>
+
+<p>2 week reminder of birthday reminder and includes gifts in email</p>
+
+<p>Login, logout, sign up, homepage</p>
+
+<p>v2</p>
+
+<p>Create gift lists and add contacts to them</p>
+
+<p>Import contacts from csv. Nobody wants to hand-code contacts</p>
+
+<p>Dashboard list of upcoming birthdays; gift, contact, list counts</p>
+
+<p>V3</p>
+
+<p>Add custom dates outside of birthday</p>
+
+<p><strong>Wireframes</strong></p>
+
+<p><em>Creating a basic landing page with the primary value proposition and additional benefit statements below.</em></p>
+
+<p><em>A v1 of the dashboard, showing upcoming birthdays, latest gifts, and the number of contacts, gifts, and lists you have.</em></p>
+
+<p><em>The contacts index page, where I can view all my contacts in a table and click to view each one.</em></p>
+
+<p><em>Lastly, a contacts update page, where I can update basic contact details or delete a contact.</em></p>
+
+<p>First its best to define the models. Otherwise, even as the app creator, you can get confused what is what. And it’s even more confusing when communicating with designers, or developers.</p>
+
+<h2 id="https-timpittman-co-2018-11-23-shipping-gardenshq-com-definitions-definitions">[](<a href="https://timpittman.co/2018/11/23/Shipping-Gardenshq-com/#Definitions)Definitions:">https://timpittman.co/2018/11/23/Shipping-Gardenshq-com/#Definitions)Definitions:</a></h2>
+
+<p>User → end user with an account</p>
+
+<p>Contact → a user has many contacts they manage</p>
+
+<p>Gift → a URL/title of an item for a specific contact</p>
+
+<p>List → a group of contacts needing a category of gifts, ex, birthday, Christmas, etc</p>
+
+<h2 id="https-timpittman-co-2018-11-23-shipping-gardenshq-com-user-stories-user-stories">[](<a href="https://timpittman.co/2018/11/23/Shipping-Gardenshq-com/#User-Stories)User">https://timpittman.co/2018/11/23/Shipping-Gardenshq-com/#User-Stories)User</a> Stories</h2>
+
+<p>As a user, I can create a new contact and add basic contact details &amp; saves notes</p>
+
+<p>As a user, I can add a gift and attach it to a specific contact of mine</p>
+
+<p>As a user, I can create a gift list and add contacts to that gift list</p>
+
+<p>As a user, I can import contacts via CSV file, in order to easily add existing contacts rather than create from scratch</p>
+
+<p>As a user, I can view all my contacts, view a single contact, and edit or delete that contact.</p>
+
+<p>As a user, I can view upcoming birthdays, all my lists, in a single dashboard view.</p>
+
+<h2 id="https-timpittman-co-2018-11-23-shipping-gardenshq-com-data-models-data-models">[](<a href="https://timpittman.co/2018/11/23/Shipping-Gardenshq-com/#Data-Models)Data">https://timpittman.co/2018/11/23/Shipping-Gardenshq-com/#Data-Models)Data</a> Models</h2>
+
+<p>In each app I’ve created, my biggest mistake has been not carefully thinking about data models. Not only will this clarify your thinking of how your data will be structured, but also how it may grow in the future. This is the foundation of your application and must be carefully planned.</p>
+
+<p>This is a fugly rough version of my data model: <a href="https://docs.google.com/drawings/d/1F5YLl6lhsmnJyPOOIzpg2pxslLGApo135lzNTbzK-Bo/edit?usp=sharing">https://docs.google.com/drawings/d/1F5YLl6lhsmnJyPOOIzpg2pxslLGApo135lzNTbzK-Bo/edit?usp=sharing</a></p>
+
+<p>The major benefit of outlining this ahead of time is thinking through</p>
+
+<p>what fields and field types you need on each model. This avoids getting stuck midway through development and wrangling with database seeds and migrations during building time</p>
+
+<p>what relationships you’ll have. will you have one-to-one or one-to-many or even more complex relationships? think through those first before you start building</p>
+
+<p>Building</p>
+
+<p>Since this project wasn’t strictly a project I had planned to validate as quickly as possible and try to monetize, I experimented with Ruby on Rails. I’m more comfortable in Node/Mongo/Express/React. But I’ve just read so much about the speed and conventions of Rails I thought I’d give it a try.</p>
+
+<p>I won’t go into the step-by-step guide of building this out, but here’s my takeaways from the project.</p>
+
+<p>Building in whatever stack you’re familiar with is likely the fastest. Rails took a very long time because it was new. I only started seeing benefits towards the end</p>
+
+<p>ActiveRecord for MVPs, might be the most elegant and speedy way to manage your data. I really began to love it process of creating and seeding data in postgresSQL, which has some benefits over NoSQL dbs, like Mongo</p>
+
+<p>Building a dynamic front-end in Rails is frustrating. I really don’t want to use jQuery and rails convention for handling Ajax with via templates. I like it all in JavaScript (though you can do this with rails)</p>
+
+<p>Love it or hate it, JavaScript and Node is outpacing ruby &amp; rails. So I’ll keep using these languages moving forward.</p>
+
+<h2 id="https-timpittman-co-2018-11-23-shipping-gardenshq-com-learnings-learnings">[](<a href="https://timpittman.co/2018/11/23/Shipping-Gardenshq-com/#Learnings)Learnings">https://timpittman.co/2018/11/23/Shipping-Gardenshq-com/#Learnings)Learnings</a></h2>
+
+<p>This wasn’t a major project. So I don’t suspect it to be used by very many people outside of maybe my girlfriend =) Here’s some takeaways and learnings I’ll use for next time.</p>
+
+<ul>
+<li>Stated above, stick to your stack of choice. Mine is node, mongo, express. These are just tools, don’t make them the focus. Stick with what’s comfortable, keep it as simple as possible.</li>
+<li>Actually do customer development &amp; competitive analysis. There are other tools out there to manage your contacts. This perhaps does a worse job. Monica, Airtable, google sheets, Ryze, and others do a fine job and I likely wouldn’t have competed unless this was a pet project.</li>
+<li>Rails actually is very convenient for CRUD apps: I created mailers, a CSV importer, authentication pretty quick relative to my knowledge</li>
+<li>Always wireframe and data model beforehand. Because I was riffing this project, I freestyled it a bit. Even with this simple app in my head, I wrangled with page templates, routing, etc. because it wasn’t 100% confirmed beforehand.</li>
+</ul>
+
+<p>Building Apps may be the easiest part. I learned Ruby from a $9 udemy course + google. If I can do it, anyone can do it. What is harder is shipping very quickly, getting feedback, creating something people actually want and provides value, knowing when to quit.</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://pittman021.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://pittman021.github.io/js/main.js"></script>
+<script src="https://pittman021.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
