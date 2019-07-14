@@ -29,7 +29,6 @@ description = "Basic personal site theme styled with minimal tachyons, syntax hi
   name = "about"
   url = "about/"
   
-
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
