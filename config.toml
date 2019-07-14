@@ -1,4 +1,41 @@
 baseURL = "https://pittman021.github.io/"
 languageCode = "en-us"
 title = "Tim Pittman's Blog"
-theme = "hugo-theme-cactus-plus"
+theme = "hugo-theme-basic"
+
+googleAnalytics = "UA-XXXXXXXXX-X"
+enableEmoji = true 
+copyright = "© 2016-19 <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>. Made by <a href='https://twitter.com/siegerts'>@siegerts</a>."
+description = "Basic personal site theme styled with minimal tachyons, syntax highlighting, and blog series configuration."
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[params]
+  titleEmoji = ":clap:"
+  # change this!
+  twitter = "pittman021"
+
+[Permalinks]
+  post = "post/:slug"
+
+[[params.menu]]
+  name = "blog"
+  url = "posts/"
+
+[[params.menu]]
+  name = "about"
+  url = "about/"
+  
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
