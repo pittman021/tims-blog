@@ -8,6 +8,6 @@ A simple site that allows you to create contacts & save gifts.
 
 URL: [gardenshq.com](gardenshq.com)
 
-![image alt text](/gardens.png)
+![image alt text](/img/gardens.png)
 
 
