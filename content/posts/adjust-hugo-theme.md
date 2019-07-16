@@ -15,7 +15,7 @@ The biggest headache I came across was setting up a theme. When you clone a them
 Here is how you simply install a theme & avoid submodules. 
 
 ```
-# start at your root folder# install your themegit clone http://url-to-themerm -rf theme-folder-name/.git# now go back and check in your new foldecd .git add themes/theme-folder-name
+# start at your root folder# install your themegit clone http://url-to-themerm -rf theme-folder-name/.git# now go back and check in your new foldercd git add themes/theme-folder-name
 ```
 
 And that's it. What this does is remove the submodule from git & allows you to simply commit your changes to your root folder git repository. 
