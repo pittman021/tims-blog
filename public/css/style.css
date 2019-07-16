@@ -49,6 +49,10 @@ table {
     display: none;
 }
 
+.inline {
+    display:inline;
+}
+
 
 /* Icons */
 

@@ -1,11 +1,10 @@
 baseURL = "timpittman.co"
 languageCode = "en-us"
-title = "Tim Pittman's Blog"
+title = "Tim Pittman"
 theme = "hugo-theme-basic"
-
 googleAnalytics = "UA-XXXXXXXXX-X"
 enableEmoji = true 
-copyright = "© 2016-19 <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>. Made by <a href='https://twitter.com/siegerts'>@siegerts</a>."
+copyright = "<a href='https://twitter.com/pittman021'>pittman021</a>."
 description = "Basic personal site theme styled with minimal tachyons, syntax highlighting, and blog series configuration."
 
 [taxonomies]
@@ -14,8 +13,8 @@ description = "Basic personal site theme styled with minimal tachyons, syntax hi
   tag = "tags"
 
 [params]
+  description = "Currently customer retention @bazaarvoice. formerly customer success @sumome. Creating things on the side. 🚀"
   titleEmoji = ":clap:"
-  # change this!
   twitter = "pittman021"
 
 [Permalinks]
@@ -25,9 +24,9 @@ description = "Basic personal site theme styled with minimal tachyons, syntax hi
   name = "blog"
   url = "posts/"
 
-[[params.menu]]
-  name = "about"
-  url = "about/"
+  [[params.menu]]
+  name = "projects"
+  url = "projects/"
   
 [privacy]
   [privacy.googleAnalytics]
