@@ -21,7 +21,7 @@ description = "Basic personal site theme styled with minimal tachyons, syntax hi
   post = "post/:slug"
 
 [[params.menu]]
-  name = "post"
+  name = "posts"
   url = "posts/"
 
   [[params.menu]]
