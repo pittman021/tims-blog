@@ -1,13 +1,8 @@
 ---
-type: "project"
-title: "Gardenshq"
-thumbnail: "[gardenshq.com](gardenshq.com)"
-date: 2019-07-16T07:26:49-05:00
-description: "A simple CRM that keeps you on top of birthdays & gifts"
-url: "gardenshq.com"
-featured_image: ""
-draft: false
-
+title: Gardenshq
+description: A simple CRM that keeps you on top of birthdays & gifts
+date: 2019-07-16T12:26:49.000Z
+featured_image: /images/uploads/gardens.png
 ---
 
 [gardenshq.com](https://gardenshq.com)
