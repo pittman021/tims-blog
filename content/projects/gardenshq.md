@@ -1,13 +1,11 @@
 ---
+type: "project"
 title: "Gardenshq"
+thumbnail: "[gardenshq.com](gardenshq.com)"
 date: 2019-07-16T07:26:49-05:00
+description: "A simple CRM that keeps you on top of birthdays & gifts"
+url: "gardenshq.com"
 draft: false
 ---
 
-A simple site that allows you to create contacts & save gifts.
-
-URL: [gardenshq.com](gardenshq.com)
-
-![image alt text](/img/gardens.png)
-
-
+[gardenshq.com](https://gardenshq.com)

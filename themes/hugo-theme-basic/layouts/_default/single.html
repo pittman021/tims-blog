@@ -11,10 +11,12 @@
     href="{{ .Site.BaseURL  }}"
     class="b bb bw1 pb1 no-underline black"
     >{{ .Site.Title }}</a
-  >
+    >
 
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">{{ .Title }}</h1>
+
+    <h2>{{ .Description }} </h2>
 
     <article itemprop="articleBody" id="content" class="w-90 lh-copy">
       {{ .Content }}

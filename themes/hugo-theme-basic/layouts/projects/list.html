@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+
+
+<body
+  lang="{{ .Site.LanguageCode }}"
+  class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns"
+>
+
+  <a
+    href="{{ .Site.BaseURL  }}"
+    class="b bw1 bb pb1 no-underline black"
+    >{{ .Site.Title  }}</a
+  >
+  
+  <section id="main" class="mt5">
+    <div>
+                <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+                    {{ range .Data.Pages.ByDate.Reverse }}
+                    <div class="tc">
+                      <img src="http://tachyons.io/img/avatar_1.jpg" class="br-100 h3 w3 dib" title="Photo of a kitty staring at you">
+                      <h1 class="f4">{{ .Title }}</h1>
+                      <hr class="mw3 bb bw1 b--black-10">
+                    </div>
+                    <p class="lh-copy measure center f6 black-70">
+                      {{ .Description }}
+                    </p>
+                    {{ end }}
+                  </article>
+    </div>
+            
+  </section>
+
+  {{ partial "footer.html" . }}
+  </body>
+</html>
