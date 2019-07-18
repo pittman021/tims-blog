@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Tim Pittman"
 theme = "hugo-theme-basic"
-googleAnalytics = "UA-XXXXXXXXX-X"
+googleAnalytics = "UA-102047143-1"
 enableEmoji = true 
 copyright = "<a href='https://twitter.com/pittman021'>pittman021</a>."
 description = "Basic personal site theme styled with minimal tachyons, syntax highlighting, and blog series configuration."
