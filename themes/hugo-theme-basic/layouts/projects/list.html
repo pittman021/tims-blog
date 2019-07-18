@@ -13,20 +13,21 @@
   >
   
   <section id="main" class="mt5">
-    <div>
-                <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-                    {{ range .Data.Pages.ByDate.Reverse }}
-                    <div class="tc">
-                      <img src="{{ .Params.Featured_image }}" class="br-100 h3 w3 dib" title="{{ .Title }}">
-                      <h1 class="f4">{{ .Title }}</h1>
-                      <hr class="mw3 bb bw1 b--black-10">
-                    </div>
-                    <p class="lh-copy measure center f6 black-70">
-                      {{ .Description }}
-                    </p>
-                  </article>
-                  {{ end }}
-    </div>
+      <article>
+          <div class="cf pa2">
+        {{ range .Data.Pages.ByDate.Reverse }}
+            <div class="fl w-third pa2 pa2">
+                <a target="_blank" href="http://{{ .Params.Url }}" class="db link dim tc">
+                  <img src="{{ .Params.Featured_image }}" alt="{{ .Title }}" class="w-100 h-200 db outline black-10"/>
+                  <dl class="mt2 f6 lh-copy">
+                    <dt class="clip">{{ .Title}}</dt>
+                    <dd class="ml0 black truncate w-100">{{ .Title }}</dd>
+                  </dl>
+                </a>
+            </div>
+            {{ end }}  
+          </div>
+       </article>
             
   </section>
 
