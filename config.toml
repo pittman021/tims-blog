@@ -6,6 +6,8 @@ googleAnalytics = "UA-102047143-1"
 enableEmoji = true 
 copyright = "<a href='https://twitter.com/pittman021'>pittman021</a>."
 description = "Basic personal site theme styled with minimal tachyons, syntax highlighting, and blog series configuration."
+enableRobotsTXT = true
+canonifyURLs = true
 
 [taxonomies]
   category = "categories"
