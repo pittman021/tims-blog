@@ -7,8 +7,6 @@
   <head>
     <meta charset="utf-8" />
 
-    {{ partial "meta.html" . }}
-
     <title>{{ .Site.Title }}</title>
     <link rel="canonical" href="{{ .Permalink }}" />
 {{ $sitetitle := .Site.Title }}
@@ -20,6 +18,12 @@
       title="{{ $sitetitle }}"
     />
 {{ end }}
+
+<!-------------- Meta ------------------->
+    {{ partial "meta.html" . }}
+
+<!-----------Head Includes -------------->
+    {{ partial "seo_schema.html" . }}
     {{ partial "head_includes.html" . }}
   </head>
   <body

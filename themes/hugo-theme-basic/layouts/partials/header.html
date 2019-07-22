@@ -9,9 +9,7 @@
 
     {{ partial "seo_schema.html" . }}
 
-    {{ partial "meta.html" . }}
-
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }} - Tim Pittman</title>
     <link rel="canonical" href="{{ .Permalink }}" />
 {{ $title := .Title }}
 {{ with .OutputFormats.Get "RSS" }}
@@ -22,6 +20,8 @@
       title="{{ $title }}"
     />
 {{ end }}
+
+    {{ partial "meta.html" . }}
     {{ partial "head_includes.html" . }}
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
