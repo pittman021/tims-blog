@@ -15,7 +15,7 @@ canonifyURLs = true
   tag = "tags"
 
 [params]
-  description = "Currently customer retention @bazaarvoice. formerly customer success @sumome. Creating things on the side. 🚀"
+  description = "<p>Currently customer retention @bazaarvoice.</p><p>Formerly customer success @sumome.</p><p> Creating things on the side. 🚀 </p>"
   titleEmoji = ":clap:"
   twitter = "pittman021"
 

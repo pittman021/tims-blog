@@ -46,7 +46,7 @@
           {{ end }}
         </ul>
 
-        <h3>{{ .Site.Params.Description }} </h3>
+        <h3>{{ with .Site.Params.Description }}{{ . | safeHTML }}{{ end }} </h3>
       </div>
 
       <br>
