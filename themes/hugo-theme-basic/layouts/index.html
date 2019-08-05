@@ -30,7 +30,10 @@
     lang="{{ .Site.LanguageCode }}"
     class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns"
   >
-    <section id="main">
+    <section class="text-center" id="main">
+      <div class="profile">
+          <img id="avatar" src="images/tim_cropped.jpg" />
+      </div>
       <div>
         <h1 id="title" class="f3">
           {{ .Site.Title }} {{ .Site.Params.TitleEmoji | emojify }}
