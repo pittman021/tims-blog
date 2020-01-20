@@ -61,14 +61,14 @@
          <ul id="list" class="pl0">
            
             {{ range first 1000 .Data.Pages.ByDate.Reverse }}
-            <li class="list lh-copy">
+            <li class="list lh-copy pb1">
               <a
-                class="f4 b dib black no-underline"
+                class="f5 ttu tracked fw6 pt5 mt2 mb0 no-underline"
                 href="{{ .Permalink}}"
                 >{{ .Title }}</a
               >
               <span
-                class="f6 gray db dib-ns"
+                class="f7 gray db dib-ns"
                 >{{ .Date.Format "January 2, 2006" }}</span
               >
             </li>
