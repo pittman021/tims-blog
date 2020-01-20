@@ -15,7 +15,7 @@ canonifyURLs = true
   tag = "tags"
 
 [params]
-  description = "Director of client programs <a href='bazaarvoice.com'>bazaarvoice</a>. Formerly customer success <a href='sumo.com'>Sumo.com</a>. </br></br> Host of the Valencia CF Podcast 🎤"
+  description = "Director of Client Programs <a href='bazaarvoice.com'>bazaarvoice</a>. </ br> Formerly Head of Customer Success at <a href='sumo.com'>sumo.com</a>. Host of the <a href='https://twitter.com/AmuntPodcast'> Valencia CF Podcast</a> 🎤"
   titleEmoji = ""
   twitter = "pittman021"
 

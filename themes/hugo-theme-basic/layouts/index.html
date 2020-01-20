@@ -28,14 +28,14 @@
   </head>
   <body
     lang="{{ .Site.LanguageCode }}"
-    class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns"
+    class="helvetica w-90 w-60-ns center center-ns mv2 mv5-ns"
   >
-    <section class="text-center" id="main">
-      <div class="profile">
+    <section class="bg-black-0125 w-100" id="main">
+    
           <img id="avatar" src="images/tim_cropped.jpg" />
       </div>
       <div>
-        <h1 id="title" class="f">
+        <h1 id="title" class="f1">
           {{ .Site.Title }} {{ .Site.Params.TitleEmoji | emojify }}
         </h1>
         <ul class="list pl0">
@@ -49,12 +49,14 @@
           {{ end }}
         </ul>
 
-        <p>{{ with .Site.Params.Description }}{{ . | safeHTML }}{{ end }} </p>
+        <h3 class="lh-copy measure-wide">{{ with .Site.Params.Description }}{{ . | safeHTML }}{{ end }} </h3>
       </div>
 
-      <br>
+    </section>
 
-        <h2>Recent Posts</h2> 
+    <br>
+
+      <h3 class="f5 fw6 bb ttu tracked">Posts</h3>
 
          <ul id="list" class="pl0">
            
@@ -74,7 +76,7 @@
             {{ end }}
           </ul>
 
-    </section>
+
 
     {{ partial "footer.html" . }}
   </body>
