@@ -3,64 +3,95 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://pittman021.github.io/posts/creating-a-simple-writing-tool/</loc>
-    <lastmod>2019-04-23T21:40:48+00:00</lastmod>
+    <loc>/pommtasker.com</loc>
+    <lastmod>2019-07-24T00:34:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/posts/</loc>
-    <lastmod>2019-04-23T21:40:48+00:00</lastmod>
+    <loc>/projects/</loc>
+    <lastmod>2019-07-24T00:34:45+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/</loc>
-    <lastmod>2019-04-23T21:40:48+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2019-07-24T00:34:45+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/posts/customer-success-as-product-management/</loc>
+    <loc>/posts/how-to-setup-a-hugo-blog-with-netlify-cms/</loc>
+    <lastmod>2019-07-20T15:03:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2019-07-20T15:03:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/freewritten.com</loc>
+    <lastmod>2019-07-16T22:50:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/gardenshq.com</loc>
+    <lastmod>2019-07-16T12:26:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/creating-a-simple-writing-tool/</loc>
+    <lastmod>2019-04-23T21:40:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/customer-success-as-product-management/</loc>
     <lastmod>2019-04-22T23:26:31+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/posts/up-from-slavery-by-booker-t-washington/</loc>
+    <loc>/posts/up-from-slavery-by-booker-t-washington/</loc>
     <lastmod>2019-02-12T15:25:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/posts/review-of-5-product-onboardings/</loc>
+    <loc>/posts/review-of-5-product-onboardings/</loc>
     <lastmod>2019-02-10T15:24:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/posts/the-coaching-habit-by-michael-bungay-stanier/</loc>
+    <loc>/posts/the-coaching-habit-by-michael-bungay-stanier/</loc>
     <lastmod>2019-02-09T15:24:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/posts/get-momentum/</loc>
+    <loc>/posts/get-momentum/</loc>
     <lastmod>2019-02-08T15:24:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/posts/shipping-gardenshq-com/</loc>
+    <loc>/posts/shipping-gardenshq-com/</loc>
     <lastmod>2018-11-23T20:53:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/posts/learning-javascript-lessons/</loc>
+    <loc>/posts/learning-javascript-lessons/</loc>
     <lastmod>2018-11-15T20:51:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://pittman021.github.io/tags/</loc>
+    <loc>/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   

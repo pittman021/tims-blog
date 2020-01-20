@@ -35,7 +35,7 @@
           <img id="avatar" src="images/tim_cropped.jpg" />
       </div>
       <div>
-        <h1 id="title" class="f3">
+        <h1 id="title" class="f">
           {{ .Site.Title }} {{ .Site.Params.TitleEmoji | emojify }}
         </h1>
         <ul class="list pl0">
@@ -49,19 +49,19 @@
           {{ end }}
         </ul>
 
-        <h3>{{ with .Site.Params.Description }}{{ . | safeHTML }}{{ end }} </h3>
+        <p>{{ with .Site.Params.Description }}{{ . | safeHTML }}{{ end }} </p>
       </div>
 
       <br>
 
-        <!-- <h2>Recent Posts</h2> -->
+        <h2>Recent Posts</h2> 
 
-        <!-- <ul id="list" class="pl0">
+         <ul id="list" class="pl0">
            
-            {{ range first 5 .Data.Pages.ByDate.Reverse }}
+            {{ range first 1000 .Data.Pages.ByDate.Reverse }}
             <li class="list pl0 lh-copy">
               <a
-                class="f3 b dib black no-underline"
+                class="f4 b dib black no-underline"
                 href="{{ .Permalink}}"
                 >{{ .Title }}</a
               >
@@ -72,7 +72,7 @@
             </li>
          
             {{ end }}
-          </ul> -->
+          </ul>
 
     </section>
 

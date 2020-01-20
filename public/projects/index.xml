@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Tim Pittman</title>
+    <link>/projects/</link>
+    <description>Recent content in Projects on Tim Pittman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#39;https://twitter.com/pittman021&#39;&gt;pittman021&lt;/a&gt;.</copyright>
+    <lastBuildDate>Wed, 24 Jul 2019 00:34:45 +0000</lastBuildDate>
+    
+	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PommTasker</title>
+      <link>/pommtasker.com</link>
+      <pubDate>Wed, 24 Jul 2019 00:34:45 +0000</pubDate>
+      
+      <guid>/pommtasker.com</guid>
+      <description>pommtasker.com</description>
+    </item>
+    
+    <item>
+      <title>Freewritten</title>
+      <link>/freewritten.com</link>
+      <pubDate>Tue, 16 Jul 2019 22:50:31 +0000</pubDate>
+      
+      <guid>/freewritten.com</guid>
+      <description>URL: freewritten.com
+A simple journal to write each day &amp;amp; track your progress.</description>
+    </item>
+    
+    <item>
+      <title>Gardens</title>
+      <link>/gardenshq.com</link>
+      <pubDate>Tue, 16 Jul 2019 12:26:49 +0000</pubDate>
+      
+      <guid>/gardenshq.com</guid>
+      <description>gardenshq.com</description>
+    </item>
+    
+  </channel>
+</rss>

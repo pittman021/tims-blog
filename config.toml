@@ -15,20 +15,12 @@ canonifyURLs = true
   tag = "tags"
 
 [params]
-  description = "<p>Currently customer retention @bazaarvoice.</p><p>Formerly customer success @sumome.</p><p> Creating things on the side. 🚀 </p>"
-  titleEmoji = ":clap:"
+  description = "Currently director of client programs <a href='bazaarvoice.com'>bazaarvoice</a>. Formerly customer success <a href='sumo.com'>Sumo.com</a>. </br></br> Host of the Valencia CF Podcast 🎤"
+  titleEmoji = ""
   twitter = "pittman021"
 
 [Permalinks]
   post = "post/:slug"
-
-[[params.menu]]
-  name = "posts"
-  url = "posts/"
-
-[[params.menu]]
-  name = "projects"
-  url = "projects/"
   
 [privacy]
   [privacy.googleAnalytics]

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "\/"
+        },
+        "articleSection" : "posts",
+        "name" : "How to Setup a Hugo Blog with Netlify CMS",
+        "headline" : "How to Setup a Hugo Blog with Netlify CMS",
+        "description" : "This is how you create a Hugo static site and install Netlify CMS. Netlify CMS is a free open-source tool for managing your content. You get setup with an \/admin section of your site to write, edit, and publish your blog articles.\nI wanted to write this because I came across several gotchas that slowed me down, such as installing and updating a theme as well as configuring my Netlify site.",
+        "inLanguage" : "en-US",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-07-20 15:03:14.508 \x2b0000 UTC",
+        "dateModified" : "2019-07-20 15:03:14.508 \x2b0000 UTC",
+        "url" : "\/posts\/how-to-setup-a-hugo-blog-with-netlify-cms\/",
+        "wordCount" : "1264",
+        "keywords" : [ "Blog" ]
+    }
+    </script>
+
+    <title>How to Setup a Hugo Blog with Netlify CMS - Tim Pittman</title>
+    <link rel="canonical" href="/posts/how-to-setup-a-hugo-blog-with-netlify-cms/" />
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="This is how you create a Hugo static site and install Netlify CMS. Netlify CMS is a free open-source tool for managing your content. You get setup with an /admin section of your site to write, edit, and publish your blog articles.
+I wanted to write this because I came across several gotchas that slowed me down, such as installing and updating a theme as well as configuring my Netlify site.|Currently director of client programs &lt;a href=&#39;bazaarvoice.com&#39;&gt;bazaarvoice&lt;/a&gt;. Formerly customer success &lt;a href=&#39;sumo.com&#39;&gt;Sumo.com&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt; Host of the Valencia CF Podcast 🎤" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="How to Setup a Hugo Blog with Netlify CMS" />
+<meta property="og:site_name" content="Tim Pittman" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="/posts/how-to-setup-a-hugo-blog-with-netlify-cms/" />
+<meta property="og:locale" content="en-us" />
+<meta property="article:published_time" content="2019-07-20
+" /> <meta property="article:modified_time" content="2019-07-20
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@pittman021" />
+<meta name="twitter:creator" content="@pittman021" />
+<meta
+  name="twitter:title"
+  content="How to Setup a Hugo Blog with Netlify CMS | Tim Pittman"
+/>
+<meta
+  name="twitter:description"
+  content="This is how you create a Hugo static site and install Netlify CMS. Netlify CMS is a free open-source tool for managing your content. You get setup with an /admin section of your site to write, edit, and publish your blog articles.
+I wanted to write this because I came across several gotchas that slowed me down, such as installing and updating a theme as well as configuring my Netlify site.|Currently director of client programs &lt;a href=&#39;bazaarvoice.com&#39;&gt;bazaarvoice&lt;/a&gt;. Formerly customer success &lt;a href=&#39;sumo.com&#39;&gt;Sumo.com&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt; Host of the Valencia CF Podcast 🎤"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="/posts/how-to-setup-a-hugo-blog-with-netlify-cms/" />
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-102047143-1', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="en-us"
+  class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <a
+    href="/"
+    class="b bb bw1 pb1 no-underline black"
+    >Tim Pittman</a
+    >
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">How to Setup a Hugo Blog with Netlify CMS</h1>
+
+    <h2> </h2>
+
+    <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+      
+
+<p>This is how you create a Hugo static site and install  Netlify CMS. Netlify CMS is a free open-source tool for managing your content. You get setup with an /admin section of your site to write, edit, and publish your blog articles.</p>
+
+<p>I wanted to write this because I came across several gotchas that slowed me down, such as installing and updating a theme as well as configuring my Netlify site.</p>
+
+<h2 id="what-is-hugo"><strong>What is Hugo?</strong></h2>
+
+<p>Hugo is a static site generator. It&rsquo;s extremely fast and easy to get started. It&rsquo;s a great solution for creating a simple blog or portfolio site. In this guide we&rsquo;ll be hosting our site on Github. This allows us to host our blog for free.</p>
+
+<p>First, install Hugo following the directions, <a href="https://gohugo.io/getting-started/installing">here:</a></p>
+
+<p>Next, setup a Github account if you don&rsquo;t have one already, <a href="https://github.com/">here</a>.</p>
+
+<h2 id="create-a-hugo-project"><strong>Create a Hugo Project</strong></h2>
+
+<p>Now that you have Hugo installed and a Github account created, let&rsquo;s create your blog. We&rsquo;ll name our site &lsquo;my-blog&rsquo;.</p>
+
+<ol>
+<li><p>Start in the directory you want your site to live. The command below will create a new directory named &lsquo;my-blog&rsquo;.</p>
+
+<pre><code>hugo new site my-blog
+</code></pre></li>
+</ol>
+
+<p>Now let&rsquo;s add a theme. You can choose from a library of themes, <a href="https://themes.gohugo.io/">here</a>. If you plan to adjust your theme, I recommend starting with something light. I used <a href="https://themes.gohugo.io/hugo-theme-basic/">Hugo Theme Basic</a>.</p>
+
+<pre><code># move into your new site folder
+
+cd my-blog
+
+# go ahead and initialize git
+
+git init 
+
+# move into your themes folder and copy the theme folder
+cd themes
+git clone https://github.com/siegerts/hugo-theme-basic.git
+</code></pre>
+
+<p>At this point, you may find instructions to install this using a &lsquo;submodule&rsquo;. I don&rsquo;t recommend it. Instead, we&rsquo;ll just remove the git file in the theme folder. Then we&rsquo;ll commit this folder to your root project. This allows you to easily edit your theme without committing changes to a submodule, which is a huge pain, in my opinion.</p>
+
+<pre><code># move to your root folder
+cd ..
+
+# push your new project to github
+
+git add .git commit -m 'first commit of new blog'
+git push origin master
+</code></pre>
+
+<p>You now have a new site committed to Github. You can view your site locally by starting the Hugo server</p>
+
+<pre><code>hugo server
+</code></pre>
+
+<p>This should open your browser and show your new site.</p>
+
+<h2 id="setting-up-netlify">Setting up Netlify</h2>
+
+<p>Now that you have your site pushed to Github. It&rsquo;s time to setup Netlify.</p>
+
+<p>Here&rsquo;s what we&rsquo;ll do:</p>
+
+<ol>
+<li>Setup an account on Netlify</li>
+<li>Connect it to the GitHub repo you just created</li>
+<li>Add Netlify CMS to your site files</li>
+<li>Commit those files to your GitHub repo again</li>
+<li>Send yourself an invitation via Netlify</li>
+<li>Login to your back end.</li>
+<li>Start publishing!</li>
+</ol>
+
+<p>Head over to <a href="http://netlify.com">netlify.com</a> and create an account. Once logged-in:</p>
+
+<ol>
+<li>Under &lsquo;Sites&rsquo; click &lsquo;Create New Site from Git&rsquo;</li>
+<li>Authenticate Your Github Account</li>
+<li>Choose the repo you created before.</li>
+<li>Under &lsquo;Build Command&rsquo;, enter &lsquo;hugo&rsquo;</li>
+<li>Under Publish Directory, enter &lsquo;public/&rsquo;</li>
+<li>Click &lsquo;Deploy Site&rsquo;</li>
+</ol>
+
+<p>That&rsquo;s it! On the next screen you&rsquo;ll find your new site url. Click the URL to view your site live.</p>
+
+<p>That&rsquo;s all it takes to setup continuous deployment with Netlify. Now, when you push your site to Github, Netlify will automatically redeploy your site.</p>
+
+<p>Next, be sure to setup your custom domain. I won&rsquo;t cover that in this tutorial. But it&rsquo;s pretty straightforward if you setup on Namecheap.</p>
+
+<h2 id="setup-netlify-cms"><strong>Setup Netlify CMS</strong></h2>
+
+<p>We already have Netlify setup. But we need to add Netlify CMS.</p>
+
+<p>It&rsquo;s pretty easy to setup. Here are the <a href="https://www.netlifycms.org/docs/add-to-your-site/">instructions</a> from Netlify. But we&rsquo;ll go through it together.</p>
+
+<p>The Netlify CMS files will reside in our /static folder. So we&rsquo;ll start here. In your static folder:</p>
+
+<pre><code># move to static folder
+cd static
+
+# add an admin folder, index.html file, and config.yml file
+
+mkdir admin
+touch admin/index.html
+touch config.yml
+</code></pre>
+
+<p>Inside your index.html file, add the following HTML:</p>
+
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;title&gt;Content Manager&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt;
+  &lt;script src=&quot;https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Now we need to update our config.yml file. Since we are using github, add the following code.</p>
+
+<pre><code>backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+</code></pre>
+
+<p>Next, we need to setup where are image uploads will reside. Add this to your config.yml file. Make sure it&rsquo;s not indented.</p>
+
+<pre><code>media_folder: &quot;static/images/uploads&quot; # Media files will be stored in the repo under static/images/uploads
+public_folder: &quot;/images/uploads&quot; # The src attribute for uploaded media will begin with /images/uploads
+</code></pre>
+
+<p>Those folders don&rsquo;t exist yet. Let&rsquo;s create them:</p>
+
+<pre><code># in root folder
+
+mkdir static/images
+mkdir static/images/uploads
+</code></pre>
+
+<p>Last step. Now it&rsquo;s time to setup our <strong>collections</strong>. Collections inform Netlify how our content is structured. Based on this structure, Netlify will setup the content editor form you&rsquo;ll use to create new content, such as a new blog post.</p>
+
+<p>When you create a Hugo site, the <strong>default content type is post.</strong> Writing &ldquo;hugo new post blog-1&rdquo; will create a new post for you, named &ldquo;blog-1&rdquo;. So let&rsquo;s setup our first collection for the post type.</p>
+
+<p>Inside our config.toml file:</p>
+
+<pre><code># static/admin/config.yml
+
+collections:
+  - name: &quot;blog&quot; # Used in routes, e.g., /admin/collections/blog
+    label: &quot;Blog&quot; # Used in the UI
+    folder: &quot;content/posts&quot; # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: &quot;{{slug}}&quot; # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: &quot;Title&quot;, name: &quot;title&quot;, widget: &quot;string&quot;}
+      - {label: &quot;Publish Date&quot;, name: &quot;date&quot;, widget: &quot;datetime&quot;}
+      - {label: &quot;Body&quot;, name: &quot;body&quot;, widget: &quot;markdown&quot;}
+</code></pre>
+
+<p>I called my section, &ldquo;blog&rdquo;. You can change this name. As long as it points to content/posts, it will work fine.  Now let&rsquo;s push our changes again to Github</p>
+
+<pre><code># in the root folder
+
+git add .
+git commit -m 'add Netlify CMS'
+git push origin master
+</code></pre>
+
+<h3 id="send-netlify-cms-invitation"><strong>Send Netlify CMS Invitation</strong></h3>
+
+<p>Netlify CMS is now added to your site. Last thing is to send yourself an invitation. This allows you to setup a password to edit your site.</p>
+
+<ol>
+<li>Log back into Netlify</li>
+<li>Click on your site</li>
+<li>Click on &lsquo;Identify&rsquo; in the menu</li>
+<li>Click &lsquo;invite users&rsquo;</li>
+<li>Enter your email address and press &lsquo;Send&rsquo;</li>
+</ol>
+
+<p>Check your email address. Follow the instructions to setup your account. Once your account is setup, you can go to <a href="http://mysiteurl.com/admin">mysiteurl.com/admin</a> to access Netlify CMS!</p>
+
+<h2 id="updating-your-site">Updating your Site</h2>
+
+<p>There&rsquo;s one caveat of creating content in Netlify. Each time you add content, such as create a new blog post, Netlify <strong>pushes it to your Github profile</strong>. This causes your local (what&rsquo;s on your computer) repo to be behind your remote (what&rsquo;s on github) repo.  As a result, if you change your site locally, such as update your theme,  you&rsquo;ll run into this error upon pushing changes to Github:</p>
+
+<pre><code>! [rejected]        master -&gt; master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/pittman021/tims-blog.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+
+<p>You simply need to pull the latest version of your site down to your local branch.</p>
+
+<p><strong>You should always use Git Pull fetch and download content from your remote repository before updating your site.</strong> Otherwise, you&rsquo;ll need to either 1) start over or 2) go through the process of staging your changes.</p>
+
+<pre><code># in root
+
+git pull origin master
+</code></pre>
+
+<p>That&rsquo;s it! Now, make changes to your theme or configuration, push changes again, and you&rsquo;re all set.</p>
+
+<p>Those are all of the steps required to setup a Hugo site with Netlify. I hope this was helpful.</p>
+
+    </article>
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        <a href='https://twitter.com/pittman021'>pittman021</a>.
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script src="https://whatthefaq.herokuapp.com/js/widget.js"></script>
+<script>WTF_Lib.init(["5d434062d337150004c82c17"]);WTF_Lib.check();</script>			
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

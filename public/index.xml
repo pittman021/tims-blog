@@ -1,42 +1,81 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tim Pittman&#39;s Blog</title>
-    <link>https://pittman021.github.io/</link>
-    <description>Recent content on Tim Pittman&#39;s Blog</description>
+    <title>Tim Pittman</title>
+    <link>/</link>
+    <description>Recent content on Tim Pittman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Apr 2019 21:40:48 +0000</lastBuildDate>
+    <copyright>&lt;a href=&#39;https://twitter.com/pittman021&#39;&gt;pittman021&lt;/a&gt;.</copyright>
+    <lastBuildDate>Wed, 24 Jul 2019 00:34:45 +0000</lastBuildDate>
     
-	<atom:link href="https://pittman021.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>PommTasker</title>
+      <link>/pommtasker.com</link>
+      <pubDate>Wed, 24 Jul 2019 00:34:45 +0000</pubDate>
+      
+      <guid>/pommtasker.com</guid>
+      <description>pommtasker.com</description>
+    </item>
+    
+    <item>
+      <title>How to Setup a Hugo Blog with Netlify CMS</title>
+      <link>/posts/how-to-setup-a-hugo-blog-with-netlify-cms/</link>
+      <pubDate>Sat, 20 Jul 2019 15:03:14 +0000</pubDate>
+      
+      <guid>/posts/how-to-setup-a-hugo-blog-with-netlify-cms/</guid>
+      <description>This is how you create a Hugo static site and install Netlify CMS. Netlify CMS is a free open-source tool for managing your content. You get setup with an /admin section of your site to write, edit, and publish your blog articles.
+I wanted to write this because I came across several gotchas that slowed me down, such as installing and updating a theme as well as configuring my Netlify site.</description>
+    </item>
+    
+    <item>
+      <title>Freewritten</title>
+      <link>/freewritten.com</link>
+      <pubDate>Tue, 16 Jul 2019 22:50:31 +0000</pubDate>
+      
+      <guid>/freewritten.com</guid>
+      <description>URL: freewritten.com
+A simple journal to write each day &amp;amp; track your progress.</description>
+    </item>
+    
+    <item>
+      <title>Gardens</title>
+      <link>/gardenshq.com</link>
+      <pubDate>Tue, 16 Jul 2019 12:26:49 +0000</pubDate>
+      
+      <guid>/gardenshq.com</guid>
+      <description>gardenshq.com</description>
+    </item>
+    
+    <item>
       <title>Creating a Simple Writing Tool</title>
-      <link>https://pittman021.github.io/posts/creating-a-simple-writing-tool/</link>
+      <link>/posts/creating-a-simple-writing-tool/</link>
       <pubDate>Tue, 23 Apr 2019 21:40:48 +0000</pubDate>
       
-      <guid>https://pittman021.github.io/posts/creating-a-simple-writing-tool/</guid>
+      <guid>/posts/creating-a-simple-writing-tool/</guid>
       <description>Earlier this year I came across a book titled The Artist&amp;rsquo;s Way. This book outlines a journaling habit and other activities that are intended to unlock your creativity. It calls for writing by hand 750 words each day for a month. You freewrite without stopping &amp;amp; throw away the draft when you&amp;rsquo;re done.
 I decided to pick this habit to develop a productive morning routine &amp;amp; keep my head clear and remain focused.</description>
     </item>
     
     <item>
       <title>Customer Success as Product Management</title>
-      <link>https://pittman021.github.io/posts/customer-success-as-product-management/</link>
+      <link>/posts/customer-success-as-product-management/</link>
       <pubDate>Mon, 22 Apr 2019 23:26:31 +0000</pubDate>
       
-      <guid>https://pittman021.github.io/posts/customer-success-as-product-management/</guid>
+      <guid>/posts/customer-success-as-product-management/</guid>
       <description>Product Managers know the importance of customer feedback to iterate and plan a product roadmap. But as a former CSM and team lead, I experienced first hand the huge opportunity lost in not leveraging CSMs as a source of customer &amp;amp; product feedback.
 Consider that your team of 3 or 4 CSMs each may have 20-50 clients in their portfolio. That means on any given week they may be speaking with, as a whole, 20+ customers.</description>
     </item>
     
     <item>
       <title>Up From Slavery by Booker T Washington</title>
-      <link>https://pittman021.github.io/posts/up-from-slavery-by-booker-t-washington/</link>
+      <link>/posts/up-from-slavery-by-booker-t-washington/</link>
       <pubDate>Tue, 12 Feb 2019 15:25:00 +0000</pubDate>
       
-      <guid>https://pittman021.github.io/posts/up-from-slavery-by-booker-t-washington/</guid>
+      <guid>/posts/up-from-slavery-by-booker-t-washington/</guid>
       <description>I love this book.
 I gained as much from this book as I had from the past three. His writing is simple. He’s impactful and magnetic. He explains topics such as education, work ethic, race relations, reading and studying, opportunity, self-improvement, and meritocracy. It’s inspirational and wise - perhaps the single best book on the topic of success I’ve read.
 He rose from being born in slavery to an honorary Harvard Ph.</description>
@@ -44,10 +83,10 @@ He rose from being born in slavery to an honorary Harvard Ph.</description>
     
     <item>
       <title>Review of 5 Product Onboardings</title>
-      <link>https://pittman021.github.io/posts/review-of-5-product-onboardings/</link>
+      <link>/posts/review-of-5-product-onboardings/</link>
       <pubDate>Sun, 10 Feb 2019 15:24:48 +0000</pubDate>
       
-      <guid>https://pittman021.github.io/posts/review-of-5-product-onboardings/</guid>
+      <guid>/posts/review-of-5-product-onboardings/</guid>
       <description>At Sumo we’ve recently discussed customer onboarding. As an exercise I reviewed 5-10 product’s and reviewed their onboarding experiences.
 I wanted to share my findings on 5 of those.
 Contents
@@ -58,20 +97,20 @@ How customers perceive their interactions with your company.</description>
     
     <item>
       <title>The Coaching Habit by Michael Bungay Stanier</title>
-      <link>https://pittman021.github.io/posts/the-coaching-habit-by-michael-bungay-stanier/</link>
+      <link>/posts/the-coaching-habit-by-michael-bungay-stanier/</link>
       <pubDate>Sat, 09 Feb 2019 15:24:23 +0000</pubDate>
       
-      <guid>https://pittman021.github.io/posts/the-coaching-habit-by-michael-bungay-stanier/</guid>
+      <guid>/posts/the-coaching-habit-by-michael-bungay-stanier/</guid>
       <description>Tell less and ask more. Your advice is not as good As you think it is. Michael Bungay Stanier
  I finished this book in the middle of last year. I haven’t read a lot of books on this topic — but this was the most impactful thus far. It provides you the mindset required to be an effective leader and coach of people. It tackles the issues many managers face — creating overdependence, getting overwhelmed and becoming disconnected.</description>
     </item>
     
     <item>
       <title>Get Momentum</title>
-      <link>https://pittman021.github.io/posts/get-momentum/</link>
+      <link>/posts/get-momentum/</link>
       <pubDate>Fri, 08 Feb 2019 15:24:02 +0000</pubDate>
       
-      <guid>https://pittman021.github.io/posts/get-momentum/</guid>
+      <guid>/posts/get-momentum/</guid>
       <description>In 2017 I taught myself to code.
 I continued to read articles about courses to help learn full-stack development. As a Project Manager at the time, it was immediately helpful to understand the web and communicate with developers.
 I took freecodecamp.com. I learned JavaScript and completed front-end (react) courses. I recommend this fully to anyone working in SaaS or technology. It’s the language of the web. The magic of the internet become something tangible.</description>
@@ -79,20 +118,20 @@ I took freecodecamp.com. I learned JavaScript and completed front-end (react) co
     
     <item>
       <title>Shipping Gardenshq.com</title>
-      <link>https://pittman021.github.io/posts/shipping-gardenshq-com/</link>
+      <link>/posts/shipping-gardenshq-com/</link>
       <pubDate>Fri, 23 Nov 2018 20:53:50 +0000</pubDate>
       
-      <guid>https://pittman021.github.io/posts/shipping-gardenshq-com/</guid>
+      <guid>/posts/shipping-gardenshq-com/</guid>
       <description>I’ve shipped my latest side project, gardenshq.com, a personal CRM geared around gift giving.
 This idea came from my girlfriend who was storing all her contacts and gifts in a google sheet, with no easy way to be 1) notified of upcoming dates 2) saving gifts she found around the web and 3) organizing gifts around holidays and birthdays. She’s a power gifter and she something with more oomph.</description>
     </item>
     
     <item>
       <title>Learning JavaScript: Lessons</title>
-      <link>https://pittman021.github.io/posts/learning-javascript-lessons/</link>
+      <link>/posts/learning-javascript-lessons/</link>
       <pubDate>Thu, 15 Nov 2018 20:51:53 +0000</pubDate>
       
-      <guid>https://pittman021.github.io/posts/learning-javascript-lessons/</guid>
+      <guid>/posts/learning-javascript-lessons/</guid>
       <description>Earlier this I decided to learn JavaScript. Here’s what I’ve learned thus far.
 Background:
 I ran into an article by Derek Sivers on learning how to program: https://sivers.org/prog.

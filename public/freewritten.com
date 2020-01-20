@@ -15,59 +15,53 @@
              "@type": "WebPage",
              "@id": "\/"
         },
-        "articleSection" : "tags",
-        "name" : "Tags",
-        "headline" : "Tags",
-        "description" : "",
+        "articleSection" : "projects",
+        "name" : "Freewritten",
+        "headline" : "Freewritten",
+        "description" : "A simple journaling tool. Track your daily writing streak.",
         "inLanguage" : "en-US",
         "author" : "",
         "creator" : "",
         "publisher": "",
         "accountablePerson" : "",
         "copyrightHolder" : "",
-        "copyrightYear" : "0001",
-        "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
-        "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
-        "url" : "\/tags\/",
-        "wordCount" : "0",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-07-16 22:50:31.23 \x2b0000 UTC",
+        "dateModified" : "2019-07-16 22:50:31.23 \x2b0000 UTC",
+        "url" : "\/freewritten.com",
+        "wordCount" : "13",
         "keywords" : [ "Blog" ]
     }
     </script>
 
-    <title>Tags - Tim Pittman</title>
-    <link rel="canonical" href="/tags/" />
+    <title>Freewritten - Tim Pittman</title>
+    <link rel="canonical" href="/freewritten.com" />
 
-
-    <link
-      href="/tags/index.xml"
-      rel="alternate"
-      type="application/rss+xml"
-      title="Tags"
-    />
 
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="description" content="|Currently director of client programs &lt;a href=&#39;bazaarvoice.com&#39;&gt;bazaarvoice&lt;/a&gt;. Formerly customer success &lt;a href=&#39;sumo.com&#39;&gt;Sumo.com&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt; Host of the Valencia CF Podcast 🎤" />
+<meta name="description" content="A simple journaling tool. Track your daily writing streak.|Currently director of client programs &lt;a href=&#39;bazaarvoice.com&#39;&gt;bazaarvoice&lt;/a&gt;. Formerly customer success &lt;a href=&#39;sumo.com&#39;&gt;Sumo.com&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt; Host of the Valencia CF Podcast 🎤" />
 <meta name="HandheldFriendly" content="True" />
 <meta name="MobileOptimized" content="320" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<meta name="description" content="A simple journaling tool. Track your daily writing streak." />
 
 <meta name="keywords" content="">
 
 
 <meta property="og:type" content="article" />
-<meta property="og:description" content="" />
-<meta property="og:title" content="Tags" />
+<meta property="og:description" content="A simple journaling tool. Track your daily writing streak." />
+<meta property="og:title" content="Freewritten" />
 <meta property="og:site_name" content="Tim Pittman" />
 <meta property="og:image" content="" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="/tags/" />
+<meta property="og:url" content="/freewritten.com" />
 <meta property="og:locale" content="en-us" />
-<meta property="article:published_time" content="0001-01-01
-" /> <meta property="article:modified_time" content="0001-01-01
+<meta property="article:published_time" content="2019-07-16
+" /> <meta property="article:modified_time" content="2019-07-16
 " />
 
 
@@ -78,14 +72,14 @@
 <meta name="twitter:creator" content="@pittman021" />
 <meta
   name="twitter:title"
-  content="Tags | Tim Pittman"
+  content="Freewritten | Tim Pittman"
 />
 <meta
   name="twitter:description"
-  content="|Currently director of client programs &lt;a href=&#39;bazaarvoice.com&#39;&gt;bazaarvoice&lt;/a&gt;. Formerly customer success &lt;a href=&#39;sumo.com&#39;&gt;Sumo.com&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt; Host of the Valencia CF Podcast 🎤"
+  content="A simple journaling tool. Track your daily writing streak.|Currently director of client programs &lt;a href=&#39;bazaarvoice.com&#39;&gt;bazaarvoice&lt;/a&gt;. Formerly customer success &lt;a href=&#39;sumo.com&#39;&gt;Sumo.com&lt;/a&gt;. &lt;/br&gt;&lt;/br&gt; Host of the Valencia CF Podcast 🎤"
 />
 <meta name="twitter:image:src" content="" />
-<meta name="twitter:domain" content="/tags/" />
+<meta name="twitter:domain" content="/freewritten.com" />
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
@@ -133,24 +127,24 @@ if (!doNotTrack) {
 <body
   lang="en-us"
   class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
 >
+  
   <span class="b">/ </span>
   <a
     href="/"
-    class="b bw1 bb pb1 no-underline black"
+    class="b bb bw1 pb1 no-underline black"
     >Tim Pittman</a
   >
-  <span class="b"> / </span>
-  
-  <span class="b pb1 no-underline black">tags</span>
 
   <section id="main" class="mt5">
-    <div>
-      <ul id="list" class="pl0">
-        
-        
-      </ul>
-    </div>
+    <h1 itemprop="name" id="title">Freewritten</h1>
+
+    <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+      A simple journaling tool. Track your daily writing streak.
+
+    </article>
   </section>
 
   <footer>
