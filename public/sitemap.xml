@@ -3,41 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/pommtasker.com</loc>
-    <lastmod>2019-07-24T00:34:45+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/</loc>
-    <lastmod>2019-07-24T00:34:45+00:00</lastmod>
+    <loc>/posts/</loc>
+    <lastmod>2020-01-07T05:42:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/posts/the-power-of-big-biographies/</loc>
+    <lastmod>2020-01-07T05:42:06+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2019-07-24T00:34:45+00:00</lastmod>
+    <lastmod>2020-01-07T05:42:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/how-to-setup-a-hugo-blog-with-netlify-cms/</loc>
     <lastmod>2019-07-20T15:03:14+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2019-07-20T15:03:14+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/freewritten.com</loc>
-    <lastmod>2019-07-16T22:50:31+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/gardenshq.com</loc>
-    <lastmod>2019-07-16T12:26:49+00:00</lastmod>
   </url>
   
   <url>

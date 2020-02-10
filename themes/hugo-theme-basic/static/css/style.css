@@ -4,6 +4,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.nunito {
+  font-family: 'Nunito'
+}
+
 code {
   padding: 2px 4px;
   font-size: 90%;

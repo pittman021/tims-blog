@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#39;https://twitter.com/pittman021&#39;&gt;pittman021&lt;/a&gt;.</copyright>
-    <lastBuildDate>Sat, 20 Jul 2019 15:03:14 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 05:42:06 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Power of Big Biographies</title>
+      <link>/posts/the-power-of-big-biographies/</link>
+      <pubDate>Tue, 07 Jan 2020 05:42:06 +0000</pubDate>
+      
+      <guid>/posts/the-power-of-big-biographies/</guid>
+      <description>People shy away from big books. They are intimidating. The thought of being stuck in one book for thousands of pages seems daunting. I don&amp;rsquo;t want to stick with one person for more than a few days, let alone weeks.
+But they are underrated as massive compendiums of knowledge on a particular period. It&amp;rsquo;s safe to say that typical big biography - Lincoln, Grant, Ben Franklin, Steve Jobs - are of lives that lasted for 60 - 80 years.</description>
+    </item>
     
     <item>
       <title>How to Setup a Hugo Blog with Netlify CMS</title>
