@@ -2,6 +2,10 @@
 title: The Power of Big Biographies
 date: 2020-01-07T05:42:06.673Z
 ---
+![](/images/uploads/books-768125.jpg)
+
+
+
 People shy away from big books. They are intimidating. The thought of being stuck in one book for thousands of pages seems daunting. I don't want to stick with one person for more than a few days, let alone weeks. 
 
 But they are underrated as massive compendiums of knowledge on a particular period. It's safe to say that typical big biography - Lincoln, Grant, Ben Franklin, Steve Jobs - are of lives that lasted for 60 - 80 years. 
