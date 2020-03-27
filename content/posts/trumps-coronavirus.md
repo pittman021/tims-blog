@@ -8,9 +8,9 @@ Because of Trump, we are stuck in our homes, isolated from our families. There w
 
 I see three primary issues with his response: 
 
-Messaging - Trump downplayed the severity, risk, and even existence of a spreading virus outbreak
-Preparation - Two months of preparation were missed, leaving us far less prepared and more vulnerable than ever. 
-Misinformation - The misinformation and muddled messaging has led to ad-hoc, disorganized, and grassroots efforts to contain this virus, leading to even more destruction.
+* Messaging - Trump downplayed the severity, risk, and even existence of a spreading virus outbreak
+* Preparation - Two months of preparation were missed, leaving us far less prepared and more vulnerable than ever. 
+* Misinformation - The misinformation and muddled messaging has led to ad-hoc, disorganized, and grassroots efforts to contain this virus, leading to even more destruction.
 
 Since the outbreak in China, [U.S. intelligence](https://www.washingtonpost.com/national-security/us-intelligence-reports-from-january-and-february-warned-about-a-likely-pandemic/2020/03/20/299d8cda-6ad5-11ea-b5f1-a5a804158597_story.html) reports included dire warnings of the possibility of a global pandemic. He ignored them. Though he didn’t need anything impacting his economy. Yet he didn’t even need special briefings - anyone could see the news coming from China.
 
